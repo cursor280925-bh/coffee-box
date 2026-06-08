@@ -1,0 +1,26 @@
+
+{
+  "name": "parcel-github-deploy",
+  "version": "1.0.0",
+  "description": "Parcel setup with SASS, SVG sprite, includes, and GitHub Pages deploy.",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "modern-normalize": "^2.0.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
+    "@parcel/transformer-raw": "^2.11.0",
+    "@parcel/packager-raw": "^2.11.0",
+    "parcel": "^2.11.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "parcel-plugin-imagemin": "^4.0.2",
+    "posthtml-include": "^1.7.4",
+    "gh-pages": "^6.1.1"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}
