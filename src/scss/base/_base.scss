@@ -1,0 +1,32 @@
+@use "../utils/variables" as *;
+@use "../utils/mixin";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  @include mixin.font-size(15px, 400);
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: $text;
+  font-family: $font-family;
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+// svg {
+//   fill: none;
+//   stroke: white;
+//   stroke-width: 2px;
+//   transition: 0.3s;
+// }
