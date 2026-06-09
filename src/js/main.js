@@ -1,4 +1,3 @@
+// import gsap from "gsap";
 
-import gsap from "gsap";
-
-gsap.from("h1", { y: -50, opacity: 0, duration: 1 });
+// gsap.from("h1", { y: -50, opacity: 0, duration: 1 });

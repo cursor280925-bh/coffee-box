@@ -10,7 +10,7 @@ body {
   @include mixin.font-size(15px, 400);
   margin: 0;
   padding: 0;
-  background: var(--bg);
+  background: $bg-body;
   color: $text;
   font-family: $font-family;
   scroll-behavior: smooth;

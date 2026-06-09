@@ -1,0 +1,31 @@
+@use "../utils/variables" as *;
+@use "../utils/mixin" as *;
+
+.hero {
+  padding: 52px 33px 84px 33px;
+}
+
+.container-hero {
+  display: grid;
+  gap: 72px;
+}
+
+.hero-box {
+  position: relative;
+  width: 327px;
+  height: 242px;
+  background: $hero-box;
+}
+
+.title-position {
+  position: absolute;
+  width: 165px;
+  top: 35%;
+  left: 25%;
+}
+
+.title {
+  @include font-size(53px, 400);
+  font-family: "Great Vibes", cursive;
+  text-align: center;
+}

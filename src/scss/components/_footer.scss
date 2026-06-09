@@ -1,0 +1,9 @@
+@use "../utils/variables" as *;
+
+.footer {
+  background: $bg-color-footer;
+}
+
+.footer-container {
+  height: 88px;
+}
