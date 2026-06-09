@@ -6,3 +6,7 @@
 
 // BASE
 @use "./base/base";
+@use "./base/reset";
+
+//COMPONENTS
+@use "./components/header";

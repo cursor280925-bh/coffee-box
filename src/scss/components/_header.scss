@@ -1,0 +1,14 @@
+@use "../utils/variables" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $bg-color-header;
+  padding: 20px;
+}
+
+.logo-text {
+  font-family: "Great Vibes", cursive;
+  font-size: 23px;
+}
