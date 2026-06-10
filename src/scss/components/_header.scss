@@ -12,3 +12,20 @@
   font-family: "Great Vibes", cursive;
   font-size: 23px;
 }
+
+.menu-btn {
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  fill: $icons;
+  cursor: none;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  transition: fill 150ms ease;
+}
