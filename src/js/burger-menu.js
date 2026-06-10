@@ -4,14 +4,16 @@ const closeBurgerButtons = document.querySelectorAll("[data-close-burger]");
 
 function openBurgerMenu() {
   if (!burgerMenu) return;
+
   burgerMenu.setAttribute("aria-hidden", "false");
-  // document.body.style.overflow = 'hidden';
 }
 
 function closeBurgerMenu() {
   if (!burgerMenu) return;
+
   burgerMenu.setAttribute("aria-hidden", "true");
-  // document.body.style.overflow = '';
+
+  openBurgerButtons[0]?.focus();
 }
 
 export function initBurgerMenu() {
