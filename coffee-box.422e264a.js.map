@@ -1,1 +1,0 @@
-{"mappings":"","sources":["src/js/main.js"],"sourcesContent":["// import gsap from \"gsap\";\n\n// gsap.from(\"h1\", { y: -50, opacity: 0, duration: 1 });\n"],"names":[],"version":3,"file":"coffee-box.422e264a.js.map"}
