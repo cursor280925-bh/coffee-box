@@ -8,8 +8,14 @@
 @use "./base/base";
 @use "./base/reset";
 
+//LAYOUT
+@use "./layout/section";
+@use "./layout/buttons";
+
 //COMPONENTS
 @use "./components/header";
 @use "./components/hero";
 @use "./components/footer";
+@use "./components/coffee-footer";
 @use "./components/burger-menu";
+@use "./components/coffe-list";

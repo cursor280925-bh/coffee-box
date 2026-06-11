@@ -1,0 +1,30 @@
+@use "../utils/variables" as *;
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.card {
+  background-color: $bg-color-article;
+  //   width: 170px;
+  height: 130px;
+  border-radius: 10px;
+}
+
+.counter-box {
+  display: flex;
+
+  align-items: center;
+}
+
+.btn-counter {
+  background: transparent;
+  border: none;
+  font-size: 23px;
+}
+
+.number {
+  font-size: 18px;
+}

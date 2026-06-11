@@ -1,0 +1,22 @@
+@use "../utils/variables" as *;
+
+// .coffee-footer {
+//   width: 185px;
+//   margin: 0 auto;
+// }
+
+.calculation-box {
+  width: 185px;
+  margin: 0 auto;
+  padding-top: 21px;
+}
+
+.calculation {
+  font-size: 20px;
+  background-color: $bg-btn-country;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 30px;
+  width: 185px;
+  margin: 0 auto;
+}
