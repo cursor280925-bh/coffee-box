@@ -1,4 +1,5 @@
 @use "../utils/variables" as *;
+@use "../utils/mixin" as *;
 
 .cards {
   display: grid;
@@ -7,6 +8,7 @@
 }
 
 .card {
+  position: relative;
   background-color: $bg-color-article;
   //   width: 170px;
   height: 130px;
@@ -14,9 +16,13 @@
 }
 
 .counter-box {
+  position: absolute;
   display: flex;
 
   align-items: center;
+  width: 98px;
+  bottom: 0;
+  left: 25%;
 }
 
 .btn-counter {
@@ -27,4 +33,22 @@
 
 .number {
   font-size: 18px;
+  padding: 0 32px;
+}
+
+.price-box {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 97px;
+  height: 33px;
+  border-radius: 0 10px 0 10px;
+  background-color: $bg-price-box;
+}
+
+.price {
+  @include font-size(18px, 700);
+
+  text-align: center;
+  padding: 5px 0;
 }

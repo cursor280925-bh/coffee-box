@@ -8,6 +8,8 @@
 .container-hero {
   display: grid;
   gap: 72px;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-box {
@@ -15,13 +17,19 @@
   width: 327px;
   height: 242px;
   background: $hero-box;
+  border-radius: 5px;
 }
 
 .title-position {
   position: absolute;
   width: 165px;
-  top: 35%;
-  left: 25%;
+  // top: 35%;
+  // left: 25%;
+  padding: 88px 81px;
+}
+
+.title-position-coffee {
+  padding: 88px 75px;
 }
 
 .title {

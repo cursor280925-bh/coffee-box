@@ -1,15 +1,21 @@
 @use "../utils/variables" as *;
 
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 // .coffee-footer {
 //   width: 185px;
 //   margin: 0 auto;
 // }
 
-.calculation-box {
-  width: 185px;
-  margin: 0 auto;
-  padding-top: 21px;
-}
+// .calculation-box {
+//   width: 185px;
+//   margin: 0 auto;
+//   padding-top: 21px;
+// }
 
 .calculation {
   font-size: 20px;
