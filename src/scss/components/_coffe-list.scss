@@ -11,7 +11,7 @@
   position: relative;
   background-color: $bg-color-article;
   width: 170px;
-  height: 130px;
+  height: 110px;
   border-radius: 10px;
   margin: 0 auto;
 }
@@ -27,22 +27,24 @@
 }
 
 .price {
-  @include font-size(18px, 700);
+  @include font-size(16px, 700);
 
-  text-align: center;
-  padding: 5px 0;
+  position: absolute;
+  top: 20%;
+  left: 30%;
 }
 
 .card-title {
-  @include font-size(23px, 400);
+  @include font-size(18px, 400);
   display: flex;
   justify-content: center;
-  padding: 46px 15px 56px 15px;
+  padding: 40px 15px 0px 15px;
 
   &_long {
+    font-size: 17px;
     text-align: center;
     line-height: 1;
-    padding: 41px 15px 43px 15px;
+    padding: 34px 15px 0px 15px;
   }
 }
 
