@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 12px 0;
 }
 
 // .coffee-footer {
@@ -11,11 +12,11 @@
 //   margin: 0 auto;
 // }
 
-// .calculation-box {
-//   width: 185px;
-//   margin: 0 auto;
-//   padding-top: 21px;
-// }
+.calculation-box {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+}
 
 .calculation {
   font-size: 20px;
