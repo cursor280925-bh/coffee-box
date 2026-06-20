@@ -1,2 +1,0 @@
-let e=document.getElementById("burger-menu"),t=document.querySelectorAll("[data-open-burger]"),n=document.querySelectorAll("[data-close-burger]");function r(){e&&e.setAttribute("aria-hidden","false")}function d(){e&&(e.setAttribute("aria-hidden","true"),t[0]?.focus())}document.addEventListener("DOMContentLoaded",()=>{t.forEach(e=>e.addEventListener("click",r)),n.forEach(e=>e.addEventListener("click",d))});
-//# sourceMappingURL=coffee-box.66961b62.js.map
