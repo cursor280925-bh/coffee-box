@@ -71,9 +71,9 @@ function chunkItems(items, size) {
   return slides;
 }
 
-function createCard(item, globalIndex, quantity) {
+function createCard(item, globalIndex, quantity, isActive) {
   const card = document.createElement("article");
-  card.className = "card";
+  card.className = `card${isActive ? " card_active" : ""}`;
   card.dataset.index = String(globalIndex);
 
   const lineTotal = item.unitPrice * quantity;
@@ -112,7 +112,12 @@ function renderSlides(track, state) {
     slideItems.forEach((item, itemIndex) => {
       const globalIndex = slideIndex * ITEMS_PER_SLIDE + itemIndex;
       cards.appendChild(
-        createCard(item, globalIndex, state.quantities[globalIndex]),
+        createCard(
+          item,
+          globalIndex,
+          state.quantities[globalIndex],
+          state.activeItems[globalIndex],
+        ),
       );
     });
 
@@ -126,6 +131,10 @@ function updateCardUI(card, item, quantity) {
     item.unitPrice * quantity,
   );
   card.querySelector(".number").textContent = String(quantity);
+}
+
+function updateCardState(card, isActive) {
+  card.classList.toggle("card_active", isActive);
 }
 
 function updateTotalDisplay(totalEl, state) {
@@ -240,6 +249,7 @@ export function initCoffeeList() {
     if (event.target.closest(".plus")) {
       if (!state.activeItems[index]) {
         state.activeItems[index] = true;
+        updateCardState(card, true);
       } else {
         state.quantities[index] += 1;
       }
@@ -254,6 +264,7 @@ export function initCoffeeList() {
         state.activeItems[index] = false;
         state.quantities[index] = 1;
         updateCardUI(card, item, 1);
+        updateCardState(card, false);
       }
     }
 
@@ -284,6 +295,7 @@ export function initCoffeeList() {
     section.querySelectorAll(".card").forEach((card) => {
       const index = Number(card.dataset.index);
       updateCardUI(card, COFFEE_ITEMS[index], 1);
+      updateCardState(card, false);
     });
 
     goToSlide(section, track, state, 0);
