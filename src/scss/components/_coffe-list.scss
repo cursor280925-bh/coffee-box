@@ -1,6 +1,23 @@
 @use "../utils/variables" as *;
 @use "../utils/mixin" as *;
 
+.slider-viewport {
+  overflow: hidden;
+  width: 100%;
+  touch-action: pan-y;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.28s ease-out;
+  will-change: transform;
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -85,4 +102,19 @@
   display: flex;
   justify-content: space-around;
   padding: 20px 0 0 0;
+}
+
+.arrow {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &_disabled,
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+  }
 }

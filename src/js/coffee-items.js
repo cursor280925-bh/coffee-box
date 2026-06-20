@@ -1,0 +1,36 @@
+export const COFFEE_ITEMS = [
+  { name: "Американо", unitPrice: 36, longTitle: false },
+  { name: "Американо з молоком", unitPrice: 40, longTitle: true },
+  { name: "Еспресо", unitPrice: 36, longTitle: false },
+  { name: "Еспресо з молоком", unitPrice: 40, longTitle: true },
+  { name: "Лунго", unitPrice: 36, longTitle: false },
+  { name: "Допіо", unitPrice: 70, longTitle: false },
+  { name: "Капучино", unitPrice: 52, longTitle: false },
+  { name: "Латте", unitPrice: 52, longTitle: false },
+  { name: "Раф", unitPrice: 58, longTitle: false },
+  { name: "Флет вайт", unitPrice: 54, longTitle: true },
+  { name: "Мокко", unitPrice: 56, longTitle: false },
+  { name: "Гарячий шоколад", unitPrice: 48, longTitle: true },
+  { name: "Какао", unitPrice: 42, longTitle: false },
+  { name: "Чай", unitPrice: 32, longTitle: false },
+  { name: "Чай з лимоном", unitPrice: 34, longTitle: true },
+  { name: "Американо XL", unitPrice: 44, longTitle: true },
+  { name: "Латте XL", unitPrice: 62, longTitle: false },
+  { name: "Капучино XL", unitPrice: 62, longTitle: true },
+  { name: "Айс латте", unitPrice: 58, longTitle: false },
+  { name: "Айс американо", unitPrice: 42, longTitle: true },
+  { name: "Фреда", unitPrice: 60, longTitle: false },
+  { name: "Бамбл", unitPrice: 64, longTitle: false },
+  { name: "Еспресо тонік", unitPrice: 66, longTitle: true },
+  { name: "Матча латте", unitPrice: 68, longTitle: true },
+  { name: "Раф ваніль", unitPrice: 62, longTitle: true },
+  { name: "Раф карамель", unitPrice: 62, longTitle: true },
+  { name: "Кава з молоком", unitPrice: 38, longTitle: true },
+  { name: "Подвійний капучино", unitPrice: 72, longTitle: true },
+  { name: "Карамельний латте", unitPrice: 60, longTitle: true },
+  { name: "Глясе", unitPrice: 54, longTitle: false },
+];
+
+export const ITEMS_PER_SLIDE = 8;
+export const SYRUP_PRICE = 2;
+export const STORAGE_KEY = "coffee-box-order";
