@@ -59,10 +59,11 @@
   @include font-size(18px, 500);
   display: flex;
   justify-content: center;
+  text-align: center;
   padding: 40px 15px 0px 15px;
 
   &_long {
-    font-size: 17px;
+    font-size: 18px;
     text-align: center;
     line-height: 1;
     padding: 34px 15px 0px 15px;
