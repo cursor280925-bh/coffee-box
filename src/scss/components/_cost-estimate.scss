@@ -1,0 +1,13 @@
+@use "../utils/variables" as *;
+
+.cost-estimate-item {
+  margin-bottom: 16px;
+
+  &__last {
+    margin-bottom: 0;
+  }
+}
+
+.bm-span {
+  font-weight: 700;
+}

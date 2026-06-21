@@ -1,6 +1,7 @@
 // import { initModal } from "./js/modal.js";
 import { initBurgerMenu } from "./js/burger-menu.js";
 import { initCoffeeList } from "./js/coffee-list.js";
+import { initCoffeeCharacteristics } from "./js/coffee-profile.js";
 // import { initKeyboard } from "./js/keyboard.js";
 // import "./js/like-toggle.js";
 // import "./js/cart.js";
@@ -11,5 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // initModal();
   initBurgerMenu();
   initCoffeeList();
+  initCoffeeCharacteristics();
   // initKeyboard();
 });

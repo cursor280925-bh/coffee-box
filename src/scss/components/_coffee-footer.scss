@@ -1,7 +1,7 @@
 @use "../utils/variables" as *;
 @use "../utils/mixin" as *;
 
-.footer-container {
+.footer-container-coffe {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -20,15 +20,11 @@
 }
 
 .syrup-box {
-  background-color: $bg-btn-country;
-  border-radius: 10px;
-  padding: 5px 0;
-}
-
-.syrup-box {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $bg-btn-country;
+  border-radius: 10px;
 }
 
 .surop-text {
@@ -37,7 +33,7 @@
 }
 
 .btn-syrup {
-  padding: 5px;
+  padding: 10px;
 }
 
 .calculation {

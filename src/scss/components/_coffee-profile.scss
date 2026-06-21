@@ -1,0 +1,65 @@
+@use "../utils/variables" as *;
+@use "../utils/mixin" as *;
+
+.coffee-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 56px;
+}
+
+.coffee-profile-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 144px;
+
+  &__title {
+    @include font-size(15px, 700);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    &_long {
+      @include font-size(7px, 400);
+    }
+
+    & .subText {
+      @include font-size(7px, 400);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  &__list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// .subText {
+//   @include font-size(7px, 400);
+// }
+
+// .coffee-profile-item__title {
+//   @include font-size(15px, 700);
+//   font-size: 15px;
+//   font-weight: 700;
+//   line-height: 1.2;
+// }
+
+// .coffee-profile-item__list {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 4px;
+// }
+
+// .coffee-profile-item__list li {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
