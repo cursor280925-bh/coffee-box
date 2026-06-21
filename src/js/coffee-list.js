@@ -2,6 +2,7 @@ import {
   COFFEE_ITEMS,
   ITEMS_PER_SLIDE,
   SYRUP_PRICE,
+  FREE_MILK,
   STORAGE_KEY,
 } from "./coffee-items.js";
 
@@ -41,6 +42,7 @@ function loadState() {
         (_, index) => saved.activeItems?.[index] ?? defaults.activeItems[index],
       ),
       syrupCount: saved.syrupCount ?? 0,
+      milkCount: saved.syrupCount ?? 0,
       currentSlide: saved.currentSlide ?? 0,
     };
   } catch {
@@ -58,7 +60,9 @@ function calculateTotal(state) {
     return sum + qty * COFFEE_ITEMS[index].unitPrice;
   }, 0);
 
-  return itemsTotal + state.syrupCount * SYRUP_PRICE;
+  return (
+    itemsTotal + state.syrupCount * SYRUP_PRICE + state.milkCount * FREE_MILK
+  );
 }
 
 function chunkItems(items, size) {
@@ -228,6 +232,8 @@ export function initCoffeeList() {
   const resetBtn = footer.querySelector(".calculation");
   const syrupPlusBtn = footer.querySelector(".syrup-plus");
   const syrupMinusBtn = footer.querySelector(".syrup-minus");
+  const milkPlusBtn = footer.querySelector(".milk-plus");
+  const milkMinusBtn = footer.querySelector(".milk-minus");
   const backBtn = section.querySelector(".arrow-back");
   const nextBtn = section.querySelector(".arrow-next");
 
@@ -286,10 +292,25 @@ export function initCoffeeList() {
     saveState(state);
   });
 
+  milkPlusBtn.addEventListener("click", () => {
+    state.milkCount += 1;
+    updateTotalDisplay(totalEl, state);
+    saveState(state);
+  });
+
+  milkMinusBtn.addEventListener("click", () => {
+    if (state.milkCount <= 0) return;
+
+    state.milkCount -= 1;
+    updateTotalDisplay(totalEl, state);
+    saveState(state);
+  });
+
   resetBtn.addEventListener("click", () => {
     state.quantities = COFFEE_ITEMS.map(() => 1);
     state.activeItems = COFFEE_ITEMS.map(() => false);
     state.syrupCount = 0;
+    state.milkCount = 0;
     state.currentSlide = 0;
 
     section.querySelectorAll(".card").forEach((card) => {

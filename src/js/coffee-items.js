@@ -42,4 +42,5 @@ export const COFFEE_ITEMS = [
 
 export const ITEMS_PER_SLIDE = 8;
 export const SYRUP_PRICE = 2;
+export const FREE_MILK = 5;
 export const STORAGE_KEY = "coffee-box-order";
