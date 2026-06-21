@@ -1,8 +1,12 @@
 export const COFFEE_ITEMS = [
   { name: "Американо", unitPrice: 36, longTitle: false },
   { name: "Американо з молоком", unitPrice: 40, longTitle: true },
+  { name: "Американо", unitPrice: 41, longTitle: false },
+  { name: "Американо з молоком", unitPrice: 45, longTitle: true },
   { name: "Еспресо", unitPrice: 36, longTitle: false },
   { name: "Еспресо з молоком", unitPrice: 40, longTitle: true },
+  { name: "Еспресо", unitPrice: 41, longTitle: false },
+  { name: "Еспресо з молоком", unitPrice: 45, longTitle: true },
   { name: "Лунго", unitPrice: 36, longTitle: false },
   { name: "Допіо", unitPrice: 70, longTitle: false },
   { name: "Капучино", unitPrice: 52, longTitle: false },
