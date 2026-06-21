@@ -3,10 +3,10 @@ import { COFFEES } from "./coffee-data.js";
 function createCoffeeCard(coffee) {
   return `
     <article class="coffee-profile-item">
-      <h3 class="coffee-profile-item__title">${coffee.name}</h3>
+      <h3 class="coffee-profile-item__title">${coffee.name} <span class="${coffee.subText ? "subText" : ""}">${coffee.secondaryName ? coffee.secondaryName : ""}</span></h3>
 
       <ul class="coffee-profile-item__list">
-        <li>
+        <li class="test">
           <span>Насиченість</span>
           <span>${coffee.saturation}</span>
         </li>
@@ -26,10 +26,14 @@ function createCoffeeCard(coffee) {
           <span>${coffee.strength}</span>
         </li>
 
-        <li>
-          <span>Аромат</span>
+        ${
+          coffee.aroma != null
+            ? `<li>
+          <span>${"Аромат" ? "Аромат" : ""}</span>
           <span>${coffee.aroma}</span>
-        </li>
+        </li>`
+            : ""
+        }
       </ul>
     </article>
     `;
