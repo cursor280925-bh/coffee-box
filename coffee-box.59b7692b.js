@@ -1,0 +1,47 @@
+function e(e){return e&&e.__esModule?e.default:e}function t(e){return new URL(i+(e=u.i?.[e]||e),import.meta.url).toString()}var n="u">typeof globalThis?globalThis:"u">typeof self?self:"u">typeof window?window:"u">typeof global?global:{},i="./",a={},r={},u=n.parcelRequiref014;null==u&&((u=function(e){if(e in a)return a[e].exports;if(e in r){var t=r[e];delete r[e];var n={id:e,exports:{}};return a[e]=n,t.call(n.exports,n,n.exports),n.exports}var i=Error("Cannot find module '"+e+"'");throw i.code="MODULE_NOT_FOUND",i}).register=function(e,t){r[e]=t},n.parcelRequiref014=u),u.register,Object.assign(u.i??={},{"2oqhA":"plus.31df08d9.svg",klCei:"minus.447367e7.svg"});let s=document.getElementById("burger-menu"),l=document.querySelectorAll("[data-open-burger]"),c=document.querySelectorAll("[data-close-burger]");function o(){s&&s.setAttribute("aria-hidden","false")}function d(){s&&(s.setAttribute("aria-hidden","true"),l[0]?.focus())}let m=[{name:"Американо",unitPrice:36,longTitle:!1},{name:"Американо з молоком",unitPrice:40,longTitle:!0},{name:"Американо",unitPrice:41,longTitle:!1},{name:"Американо з молоком",unitPrice:45,longTitle:!0},{name:"Еспресо",unitPrice:36,longTitle:!1},{name:"Еспресо з молоком",unitPrice:40,longTitle:!0},{name:"Еспресо",unitPrice:41,longTitle:!1},{name:"Еспресо з молоком",unitPrice:45,longTitle:!0},{name:"Лунго",unitPrice:36,longTitle:!1},{name:"Допіо",unitPrice:70,longTitle:!1},{name:"Капучино",unitPrice:52,longTitle:!1},{name:"Латте",unitPrice:52,longTitle:!1},{name:"Раф",unitPrice:58,longTitle:!1},{name:"Флет вайт",unitPrice:54,longTitle:!0},{name:"Мокко",unitPrice:56,longTitle:!1},{name:"Гарячий шоколад",unitPrice:48,longTitle:!0},{name:"Какао",unitPrice:42,longTitle:!1},{name:"Чай",unitPrice:32,longTitle:!1},{name:"Чай з лимоном",unitPrice:34,longTitle:!0},{name:"Американо XL",unitPrice:44,longTitle:!0},{name:"Латте XL",unitPrice:62,longTitle:!1},{name:"Капучино XL",unitPrice:62,longTitle:!0},{name:"Айс латте",unitPrice:58,longTitle:!1},{name:"Айс американо",unitPrice:42,longTitle:!0},{name:"Фреда",unitPrice:60,longTitle:!1},{name:"Бамбл",unitPrice:64,longTitle:!1},{name:"Еспресо тонік",unitPrice:66,longTitle:!0},{name:"Матча латте",unitPrice:68,longTitle:!0},{name:"Раф ваніль",unitPrice:62,longTitle:!0},{name:"Раф карамель",unitPrice:62,longTitle:!0},{name:"Кава з молоком",unitPrice:38,longTitle:!0},{name:"Подвійний капучино",unitPrice:72,longTitle:!0},{name:"Карамельний латте",unitPrice:60,longTitle:!0},{name:"Глясе",unitPrice:54,longTitle:!1}],g="coffee-box-order";var p={};p=t("2oqhA");var f={};function y(e){return e.toFixed(2).replace(".",",")}function b(){return{quantities:m.map(()=>1),activeItems:m.map(()=>!1),syrupCount:0,currentSlide:0}}function h(e){localStorage.setItem(g,JSON.stringify(e))}function T(e,t,n){e.querySelector(".price").textContent=y(t.unitPrice*n),e.querySelector(".number").textContent=String(n)}function v(e,t){e.classList.toggle("card_active",t)}function S(e,t){e.textContent=(t.quantities.reduce((e,n,i)=>t.activeItems[i]?e+n*m[i].unitPrice:e,0)+2*t.syrupCount).toFixed(2)}function P(){return Math.ceil(m.length/8)}function q(e,t){e.style.transform=`translateX(-${100*t}%)`}function E(e,t){let n=e.querySelector(".arrow-back"),i=e.querySelector(".arrow-next"),a=P()-1;n.disabled=t<=0,i.disabled=t>=a,n.classList.toggle("arrow_disabled",t<=0),i.classList.toggle("arrow_disabled",t>=a)}function C(e,t,n,i){let a=Math.max(0,Math.min(i,P()-1));a!==n.currentSlide&&(n.currentSlide=a,q(t,a),E(e,a),h(n))}f=t("klCei");let L=[{name:"Домінікана",saturation:10,acidity:7,bitterness:6,strength:8,aroma:10},{name:"Бразилія",saturation:8,acidity:6,bitterness:6,strength:6,aroma:6},{name:"Ефіопія",saturation:5,acidity:7,bitterness:6,strength:6,aroma:7},{name:"Коста-Ріка",saturation:8,acidity:8,bitterness:6,strength:6,aroma:8},{name:"Панама",saturation:8,acidity:7,bitterness:6,strength:7,aroma:8},{name:"Марагонджип",saturation:6,acidity:4,bitterness:8,strength:8,aroma:8},{name:"Бразилія",secondaryName:"(жовтий бурбон)",saturation:8,acidity:6,bitterness:6,strength:6,aroma:9,subText:!0},{name:"Колумбія ",secondaryName:"(з маскою)",saturation:6,acidity:6,bitterness:6,strength:6,aroma:6,subText:!0},{name:"Колумбія",secondaryName:"(чаша)",saturation:6,acidity:6,bitterness:6,strength:5,aroma:8,subText:!0},{name:"Кенія",saturation:10,acidity:9,bitterness:6,strength:6,aroma:10},{name:"Гондурас",saturation:7,acidity:5,bitterness:7,strength:6,aroma:6},{name:"Гватемала",saturation:8,acidity:7,bitterness:3,strength:7,aroma:7},{name:"В’єтнам",saturation:7,acidity:6,bitterness:6,strength:7,aroma:null},{name:"Індія",saturation:6,acidity:0,bitterness:8,strength:9,aroma:null},{name:"Суматра",saturation:9,acidity:5,bitterness:7,strength:7,aroma:9}];document.addEventListener("DOMContentLoaded",()=>{let t;l.forEach(e=>e.addEventListener("click",o)),c.forEach(e=>e.addEventListener("click",d)),function(){let t,n,i,a,r=document.querySelector(".coffe-list"),u=document.querySelector(".coffee-footer");if(!r||!u)return;let s=r.querySelector(".slider-track"),l=u.querySelector(".example-amount"),c=u.querySelector(".calculation"),o=u.querySelector(".syrup-plus"),d=u.querySelector(".syrup-minus"),P=r.querySelector(".arrow-back"),L=r.querySelector(".arrow-next"),x=function(){try{let e=localStorage.getItem(g);if(!e)return b();let t=JSON.parse(e),n=b();return{quantities:m.map((e,i)=>t.quantities?.[i]??n.quantities[i]),activeItems:m.map((e,i)=>t.activeItems?.[i]??n.activeItems[i]),syrupCount:t.syrupCount??0,currentSlide:t.currentSlide??0}}catch{return b()}}();s.innerHTML="",(function(e){let t=[];for(let n=0;n<e.length;n+=8)t.push(e.slice(n,n+8));return t})(m).forEach((t,n)=>{let i=document.createElement("div");i.className="slide",i.dataset.slide=String(n);let a=document.createElement("div");a.className="cards",t.forEach((t,i)=>{var r,u;let s,l,c=8*n+i;a.appendChild((r=x.quantities[c],u=x.activeItems[c],(s=document.createElement("article")).className=`card${u?" card_active":""}`,s.dataset.index=String(c),l=t.unitPrice*r,s.innerHTML=`
+    <div class="price-box">
+      <p class="price">${y(l)}</p>
+    </div>
+    <h3 class="card-title${t.longTitle?" card-title_long":""}">${t.name}</h3>
+    <div class="counter-box">
+      <button class="btn-counter minus" type="button" aria-label="\u{417}\u{43C}\u{435}\u{43D}\u{448}\u{438}\u{442}\u{438} \u{43A}\u{456}\u{43B}\u{44C}\u{43A}\u{456}\u{441}\u{442}\u{44C}">
+        <img src="${e(f)}" alt="minus icon" width="15" height="15" />
+      </button>
+      <p class="number">${r}</p>
+      <button class="btn-counter plus" type="button" aria-label="\u{417}\u{431}\u{456}\u{43B}\u{44C}\u{448}\u{438}\u{442}\u{438} \u{43A}\u{456}\u{43B}\u{44C}\u{43A}\u{456}\u{441}\u{442}\u{44C}">
+        <img src="${e(p)}" alt="plus icon" width="15" height="15" />
+      </button>
+    </div>
+  `,s))}),i.appendChild(a),s.appendChild(i)}),q(s,x.currentSlide),E(r,x.currentSlide),S(l,x),r.addEventListener("click",e=>{let t=e.target.closest(".card");if(!t)return;let n=Number(t.dataset.index),i=m[n];i&&(e.target.closest(".plus")&&(x.activeItems[n]?x.quantities[n]+=1:(x.activeItems[n]=!0,v(t,!0)),T(t,i,x.quantities[n])),e.target.closest(".minus")&&x.activeItems[n]&&(x.quantities[n]>1?(x.quantities[n]-=1,T(t,i,x.quantities[n])):(x.activeItems[n]=!1,x.quantities[n]=1,T(t,i,1),v(t,!1))),S(l,x),h(x))}),o.addEventListener("click",()=>{x.syrupCount+=1,S(l,x),h(x)}),d.addEventListener("click",()=>{x.syrupCount<=0||(x.syrupCount-=1,S(l,x),h(x))}),c.addEventListener("click",()=>{x.quantities=m.map(()=>1),x.activeItems=m.map(()=>!1),x.syrupCount=0,x.currentSlide=0,r.querySelectorAll(".card").forEach(e=>{let t=Number(e.dataset.index);T(e,m[t],1),v(e,!1)}),C(r,s,x,0),S(l,x),h(x)}),P.addEventListener("click",()=>{C(r,s,x,x.currentSlide-1)}),L.addEventListener("click",()=>{C(r,s,x,x.currentSlide+1)}),t=0,n=!1,i=e=>{t=e,n=!0},a=e=>{if(!n)return;let i=e-t;n=!1,50>Math.abs(i)||(i<0?C(r,s,x,x.currentSlide+1):C(r,s,x,x.currentSlide-1))},s.addEventListener("touchstart",e=>i(e.changedTouches[0].clientX),{passive:!0}),s.addEventListener("touchend",e=>a(e.changedTouches[0].clientX),{passive:!0}),s.addEventListener("mousedown",e=>i(e.clientX)),s.addEventListener("mouseup",e=>a(e.clientX)),s.addEventListener("mouseleave",()=>{n=!1})}(),(t=document.getElementById("coffee-grid"))&&(t.innerHTML=L.map(e=>`
+    <article class="coffee-profile-item">
+      <h3 class="coffee-profile-item__title">${e.name} <span class="${e.subText?"subText":""}">${e.secondaryName?e.secondaryName:""}</span></h3>
+
+      <ul class="coffee-profile-item__list">
+        <li class="test">
+          <span>\u{41D}\u{430}\u{441}\u{438}\u{447}\u{435}\u{43D}\u{456}\u{441}\u{442}\u{44C}</span>
+          <span>${e.saturation}</span>
+        </li>
+
+        <li>
+          <span>\u{41A}\u{438}\u{441}\u{43B}\u{438}\u{43D}\u{43A}\u{430}</span>
+          <span>${e.acidity}</span>
+        </li>
+
+        <li>
+          <span>\u{413}\u{456}\u{440}\u{447}\u{438}\u{43D}\u{43A}\u{430}</span>
+          <span>${e.bitterness}</span>
+        </li>
+
+        <li>
+          <span>\u{41C}\u{456}\u{446}\u{43D}\u{456}\u{441}\u{442}\u{44C}</span>
+          <span>${e.strength}</span>
+        </li>
+
+        ${null!=e.aroma?`<li>
+          <span>\u0410\u0440\u043E\u043C\u0430\u0442</span>
+          <span>${e.aroma}</span>
+        </li>`:""}
+      </ul>
+    </article>
+    `).join(""))});
+//# sourceMappingURL=coffee-box.59b7692b.js.map
