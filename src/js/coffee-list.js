@@ -3,6 +3,7 @@ import {
   ITEMS_PER_SLIDE,
   SYRUP_PRICE,
   FREE_MILK,
+  CREAM,
   STORAGE_KEY,
 } from "./coffee-items.js";
 
@@ -22,6 +23,8 @@ function createDefaultState() {
     quantities: COFFEE_ITEMS.map(() => 1),
     activeItems: COFFEE_ITEMS.map(() => false),
     syrupCount: 0,
+    milkCount: 0,
+    creamCount: 0,
     currentSlide: 0,
   };
 }
@@ -42,7 +45,8 @@ function loadState() {
         (_, index) => saved.activeItems?.[index] ?? defaults.activeItems[index],
       ),
       syrupCount: saved.syrupCount ?? 0,
-      milkCount: saved.syrupCount ?? 0,
+      milkCount: saved.milkCount ?? 0,
+      creamCount: saved.creamCount ?? 0,
       currentSlide: saved.currentSlide ?? 0,
     };
   } catch {
@@ -61,7 +65,10 @@ function calculateTotal(state) {
   }, 0);
 
   return (
-    itemsTotal + state.syrupCount * SYRUP_PRICE + state.milkCount * FREE_MILK
+    itemsTotal +
+    state.syrupCount * SYRUP_PRICE +
+    state.milkCount * FREE_MILK +
+    state.creamCount * CREAM
   );
 }
 
@@ -221,6 +228,7 @@ function initSwipe(section, track, state) {
   });
 }
 
+// те що імпортується в index.js
 export function initCoffeeList() {
   const section = document.querySelector(".coffe-list");
   const footer = document.querySelector(".coffee-footer");
@@ -234,6 +242,8 @@ export function initCoffeeList() {
   const syrupMinusBtn = footer.querySelector(".syrup-minus");
   const milkPlusBtn = footer.querySelector(".milk-plus");
   const milkMinusBtn = footer.querySelector(".milk-minus");
+  const creamPlusBtn = footer.querySelector(".cream-plus");
+  const creamMinusBtn = footer.querySelector(".cream-minus");
   const backBtn = section.querySelector(".arrow-back");
   const nextBtn = section.querySelector(".arrow-next");
 
@@ -306,12 +316,27 @@ export function initCoffeeList() {
     saveState(state);
   });
 
+  creamPlusBtn.addEventListener("click", () => {
+    state.creamCount += 1;
+    updateTotalDisplay(totalEl, state);
+    saveState(state);
+  });
+
+  creamMinusBtn.addEventListener("click", () => {
+    if (state.creamCount <= 0) return;
+
+    state.creamCount -= 1;
+    updateTotalDisplay(totalEl, state);
+    saveState(state);
+  });
+
   resetBtn.addEventListener("click", () => {
     state.quantities = COFFEE_ITEMS.map(() => 1);
     state.activeItems = COFFEE_ITEMS.map(() => false);
     state.syrupCount = 0;
     state.milkCount = 0;
-    state.currentSlide = 0;
+    state.creamCount = 0;
+    // state.currentSlide = 0;
 
     section.querySelectorAll(".card").forEach((card) => {
       const index = Number(card.dataset.index);
