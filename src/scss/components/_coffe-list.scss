@@ -1,6 +1,27 @@
 @use "../utils/variables" as *;
 @use "../utils/mixin" as *;
 
+.search-box {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 32px 0;
+}
+
+.search-inpet-field {
+  min-width: 262px;
+  max-height: 40px;
+  background-color: $bg-search;
+  border-radius: 10px;
+}
+
+.search-icon {
+  padding: 4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 10px 0 0 10px;
+  background-color: $bg-search1;
+}
+
 .slider-viewport {
   overflow: hidden;
   width: 100%;
